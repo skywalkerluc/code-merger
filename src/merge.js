@@ -14,7 +14,7 @@ function getAllFiles(dir) {
   const files = fs.readdirSync(dir);
 
   files.forEach(file => {
-    if (['.git', 'node_modules'].includes(file)) return;
+    if (['.git', 'node_modules', 'public'].includes(file)) return;
 
     const filePath = join(dir, file);
     const stat = fs.statSync(filePath);
